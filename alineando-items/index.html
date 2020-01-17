@@ -11,10 +11,12 @@
         
         .container {
             display: grid;
-            grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final];
-            grid-template-rows: [inicio] 200px [inicio2] 200px [final];
             grid-gap: 5px;
             height: 100vh;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            justify-items: center;
+            align-items: center;
         }
 
         .item {
@@ -23,25 +25,14 @@
             border: 1px solid red;
         }
 
-        .item:nth-of-type(1) {
-            background: blue;
-            grid-column: inicio / destacado-end;
-            grid-row: inicio / final;
+        .item:nth-of-type(5) {
+            align-self: start;
+            justify-self: start;
         }
 
-        .item:nth-of-type(2) {
-            background: blue;
-            grid-column: destacado-end / destacado2-end;
-            grid-row: inicio / final;
-        }
-
-        .item:nth-of-type(3) {
-            background: blue;
-            grid-column: destacado2-end / final;
-        }
     </style>
 
-    <title>Tamaño de item en filas</title>
+    <title>Grid implicito</title>
 </head>
 <body>
     <section class="container">
@@ -50,6 +41,13 @@
         <div class="item">item #3</div>
         <div class="item">item #4</div>
         <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
     </section>
 </body>
 </html>
